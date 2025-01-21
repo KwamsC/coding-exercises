@@ -1,19 +1,19 @@
-import { wordBreak } from "../src/wordbreak2.js"
+import { wordBreak } from "../src/wordbreak2.ts"
 import { describe, it } from 'node:test';
 import assert from 'node:assert';
 
 describe("it should return the right wordBreak", () => {
-    it("should return an empty wordBreak", () => {
+    it("should return a wordBreak", () => {
         const s = "catsanddog"
         const wordDict = ["cat","cats","and","sand","dog"]
 
         const output = ["cats and dog","cat sand dog"]
         const result = wordBreak(s, wordDict)
 
-        assert.notStrictEqual(new Set(result), new Set(output))
+        assert.deepStrictEqual(new Set(result), new Set(output))
     })
 
-    it("should return an empty wordBreak", () => {
+    it("should return an s wordBreak", () => {
         const s = "pineapplepenapple"
         const wordDict = ["apple","pen","applepen","pine","pineapple"]
 
@@ -21,7 +21,7 @@ describe("it should return the right wordBreak", () => {
 
         const result = wordBreak(s, wordDict)
 
-        assert.notStrictEqual(new Set(result), new Set(output))
+        assert.deepStrictEqual(new Set(result), new Set(output))
     })
 
     it("should return an empty wordBreak", () => {
@@ -32,6 +32,6 @@ describe("it should return the right wordBreak", () => {
 
         const result = wordBreak(s, wordDict)
 
-        assert.notStrictEqual(new Set(result), new Set(output))
+        assert.deepStrictEqual(new Set(output), new Set(result))
     })
 })

@@ -4,7 +4,7 @@
  * @return {string[]}
  */
 export const wordBreak = (s, wordDict) => {
-    const output = []
+    const output: string[] = []
     const start = s
 
     const recurse = (start, sentence) => {
@@ -13,6 +13,7 @@ export const wordBreak = (s, wordDict) => {
             return
         }
 
+        // biome-ignore lint/complexity/noForEach: <explanation>
         wordDict.forEach(word => {
             if(!start.startsWith(word)) return
     

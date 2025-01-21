@@ -7,11 +7,10 @@ export const gcd = (str1, str2) => {
     if (!str1 || !str2.length) return ""
 
     const shortestWord  = str1.length < str2.length ? str1 : str2
-
-    let word = ''
+    const word = ''
 
     for (let i = shortestWord.length; i > 0; i-- ){
-        let base = shortestWord.substring(0, i)
+        const base = shortestWord.substring(0, i)
         
         const result1 = str1.replaceAll(base, '')
         const result2 = str2.replaceAll(base, '')

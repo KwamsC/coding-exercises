@@ -1,4 +1,4 @@
-import { gcd } from "../src/gcd.js";
+import { gcd } from "../src/gcd.ts";
 import { describe, it } from 'node:test';
 import assert from 'node:assert';
 
